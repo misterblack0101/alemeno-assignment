@@ -1,3 +1,4 @@
+import 'package:alemeno_assignment/global_constants.dart';
 import 'package:alemeno_assignment/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Alemeno',
       theme: ThemeData(
         fontFamily: "Andika",
+        primaryColor: CustomColors.primaryColor,
       ),
       initialRoute: Routes.initialRoute,
       getPages: getRoutes(),
