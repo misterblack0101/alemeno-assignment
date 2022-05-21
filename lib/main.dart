@@ -1,5 +1,6 @@
-import 'package:alemeno_assignment/screens/home_screen.dart';
+import 'package:alemeno_assignment/routes/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,15 +9,16 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Alemeno',
       theme: ThemeData(
         fontFamily: "Andika",
       ),
-      home: const HomeScreen(),
+      initialRoute: Routes.initialRoute,
+      getPages: getRoutes(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

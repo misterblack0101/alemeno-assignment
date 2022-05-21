@@ -1,5 +1,7 @@
 import 'package:alemeno_assignment/global_constants.dart';
+import 'package:alemeno_assignment/routes/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,7 +17,7 @@ class HomeScreen extends StatelessWidget {
           child: Align(
             alignment: Alignment.bottomCenter,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () => Get.toNamed(Routes.clickPicture),
               child: const Text(
                 "Share Your Meal",
                 style: TextStyle(
