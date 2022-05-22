@@ -1,5 +1,5 @@
-import 'package:alemeno_assignment/global_constants.dart';
-import 'package:alemeno_assignment/widgets/global_widgets/custom_back_button.dart';
+import 'package:alemeno_assignment/widgets/global_widgets/base_layout.dart';
+import 'package:alemeno_assignment/widgets/global_widgets/curved_container.dart';
 import 'package:flutter/material.dart';
 
 class ClickPictureScreen extends StatelessWidget {
@@ -7,20 +7,14 @@ class ClickPictureScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Material(
-        color: CustomColors.backgroundColor,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 5),
-          child: Column(
-            children: [
-              const CustomBackButton(),
-              Align(
-                  alignment: Alignment.center,
-                  child: Image.asset("assets/images/animal.png")),
-            ],
-          ),
+    return BaseLayout(
+      curvedContainer: CurvedContainer(
+        displayText: "Click your meal",
+        iconButton: IconButton(
+          icon: const Icon(Icons.camera),
+          onPressed: () {},
         ),
+        mainWidget: Container(),
       ),
     );
   }
