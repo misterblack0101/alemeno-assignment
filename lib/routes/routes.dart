@@ -16,7 +16,7 @@ List<GetPage<dynamic>> getRoutes() {
     ),
     GetPage(
       name: Routes.sharePicture,
-      page: () => const SharePictureScreen(),
+      page: () => SharePictureScreen(),
     ),
     GetPage(
       name: Routes.messageScreen,
