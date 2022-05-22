@@ -20,7 +20,9 @@ class CustomRoundButton extends StatelessWidget {
       onPressed: isLoading ? null : onPressed,
       child: isLoading
           ? const Center(
-              child: CircularProgressIndicator(),
+              child: CircularProgressIndicator(
+                color: CustomColors.primaryColor,
+              ),
             )
           : childWidget,
       style: ElevatedButton.styleFrom(
