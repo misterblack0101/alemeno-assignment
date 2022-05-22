@@ -1,6 +1,7 @@
 import 'package:alemeno_assignment/global_constants.dart';
 import 'package:alemeno_assignment/widgets/global_widgets/custom_back_button.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 // The base layout consists of the animal, the back button, and the container.
 // https://www.figma.com/file/HpSvKhrVv4qbnp35oz7sjM/Alemeno-Assignment?node-id=1%3A41
@@ -20,7 +21,17 @@ class BaseLayout extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const CustomBackButton(),
+              Align(
+                alignment: Alignment.topLeft,
+                child: CustomRoundButton(
+                  onPressed: () => Get.back(),
+                  childWidget: const Icon(
+                    Icons.arrow_back,
+                    color: Colors.white,
+                    size: 30,
+                  ),
+                ),
+              ),
               Align(
                 alignment: Alignment.center,
                 child: Image.asset("assets/images/animal.png"),

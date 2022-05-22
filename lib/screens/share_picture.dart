@@ -1,9 +1,9 @@
 import 'dart:io';
-import 'package:alemeno_assignment/global_constants.dart';
 import 'package:alemeno_assignment/routes/routes.dart';
 import 'package:alemeno_assignment/services/upload_file.dart';
 import 'package:alemeno_assignment/widgets/global_widgets/base_layout.dart';
 import 'package:alemeno_assignment/widgets/global_widgets/curved_container.dart';
+import 'package:alemeno_assignment/widgets/global_widgets/custom_back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,14 +18,8 @@ class SharePictureScreen extends StatelessWidget {
     return BaseLayout(
       curvedContainer: CurvedContainer(
         displayText: "Will you eat this?",
-        iconButton: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            shape: const CircleBorder(),
-            padding: const EdgeInsets.all(10),
-            primary: CustomColors.primaryColor,
-            elevation: 3.0,
-          ),
-          child: const Icon(
+        iconButton: CustomRoundButton(
+          childWidget: const Icon(
             Icons.check_sharp,
             size: 30,
           ),
@@ -35,7 +29,7 @@ class SharePictureScreen extends StatelessWidget {
               "Animal Says:",
               message,
             );
-            Get.toNamed(Routes.messageScreen);
+            Get.offNamed(Routes.messageScreen);
           },
         ),
         mainWidget: CircleAvatar(

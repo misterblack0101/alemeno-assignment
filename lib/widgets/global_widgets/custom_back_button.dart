@@ -1,28 +1,24 @@
 import 'package:alemeno_assignment/global_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-// ignore: must_be_immutable
-class CustomBackButton extends StatelessWidget {
-  const CustomBackButton({Key? key}) : super(key: key);
+class CustomRoundButton extends StatelessWidget {
+  const CustomRoundButton(
+      {Key? key, required this.childWidget, required this.onPressed})
+      : super(key: key);
+
+  final Widget childWidget;
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.topLeft,
-      child: ElevatedButton(
-        onPressed: () => Get.back(),
-        child: const Icon(
-          Icons.arrow_back,
-          color: Colors.white,
-          size: 30,
-        ),
-        style: ElevatedButton.styleFrom(
-          elevation: 3.0,
-          shape: const CircleBorder(),
-          padding: const EdgeInsets.all(5),
-          primary: CustomColors.primaryColor,
-        ),
+    return ElevatedButton(
+      onPressed: onPressed,
+      child: childWidget,
+      style: ElevatedButton.styleFrom(
+        shape: const CircleBorder(),
+        padding: const EdgeInsets.all(10),
+        primary: CustomColors.primaryColor,
+        elevation: 3.0,
       ),
     );
   }
