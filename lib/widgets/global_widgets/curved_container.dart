@@ -17,6 +17,8 @@ class CurvedContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
+      height: double.infinity,
       decoration: const BoxDecoration(
         color: Color(0xFFF4F4F4),
         borderRadius: BorderRadius.only(

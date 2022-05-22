@@ -1,5 +1,6 @@
 import 'package:alemeno_assignment/screens/click_picture.dart';
 import 'package:alemeno_assignment/screens/home_screen.dart';
+import 'package:alemeno_assignment/screens/share_picture.dart';
 import 'package:get/get.dart';
 
 List<GetPage<dynamic>> getRoutes() {
@@ -11,6 +12,10 @@ List<GetPage<dynamic>> getRoutes() {
     GetPage(
       name: Routes.clickPicture,
       page: () => const ClickPictureScreen(),
+    ),
+    GetPage(
+      name: Routes.sharePicture,
+      page: () => const SharePictureScreen(),
     ),
   ];
   return routes;
