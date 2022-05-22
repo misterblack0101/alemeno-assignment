@@ -1,7 +1,9 @@
 import 'package:alemeno_assignment/global_constants.dart';
+import 'package:alemeno_assignment/routes/routes.dart';
 import 'package:alemeno_assignment/widgets/global_widgets/base_layout.dart';
 import 'package:alemeno_assignment/widgets/global_widgets/curved_container.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SharePictureScreen extends StatelessWidget {
   const SharePictureScreen({Key? key}) : super(key: key);
@@ -23,7 +25,9 @@ class SharePictureScreen extends StatelessWidget {
             Icons.check_sharp,
             size: 30,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Get.toNamed(Routes.messageScreen);
+          },
         ),
         mainWidget: CircleAvatar(
           radius: size.width * 0.2,
