@@ -68,7 +68,7 @@ class _ClickPictureScreenState extends State<ClickPictureScreen> {
     return BaseLayout(
       curvedContainer: CurvedContainer(
         displayText: "Click your meal",
-        // Camera Icon
+        // Click picture Icon
         iconButton: ElevatedButton(
           style: ElevatedButton.styleFrom(
             shape: const CircleBorder(),
@@ -96,6 +96,7 @@ class _ClickPictureScreenState extends State<ClickPictureScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset("assets/images/fork.png"),
+            // Camera preview
             Container(
               width: size.width * 0.5,
               height: size.width * 0.5,
