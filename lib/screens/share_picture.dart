@@ -37,7 +37,7 @@ class _SharePictureScreenState extends State<SharePictureScreen> {
             });
             final String message = await uploadFile(imagePath);
             Get.snackbar(
-              "Animal Says:",
+              "Simba Says:",
               message,
             );
             setState(() {

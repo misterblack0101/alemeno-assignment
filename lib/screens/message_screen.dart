@@ -6,20 +6,25 @@ class MessageScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Material(
+    return Material(
       color: CustomColors.backgroundColor,
-      child: Center(
-        child: Text(
-          "GOOD JOB",
-          style: TextStyle(
-            fontFamily: "LilitaOne",
-            fontSize: 48,
-            color: CustomColors.primaryColor,
-            fontWeight: FontWeight.w400,
-            letterSpacing: 3,
-            wordSpacing: 6,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          const Text(
+            "GOOD JOB",
+            style: TextStyle(
+              fontFamily: "LilitaOne",
+              fontSize: 48,
+              color: CustomColors.primaryColor,
+              fontWeight: FontWeight.w400,
+              letterSpacing: 3,
+              wordSpacing: 6,
+            ),
           ),
-        ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.07),
+          Image.asset("assets/images/animal.png"),
+        ],
       ),
     );
   }

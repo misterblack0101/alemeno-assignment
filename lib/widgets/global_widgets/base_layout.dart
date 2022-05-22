@@ -34,7 +34,8 @@ class BaseLayout extends StatelessWidget {
               ),
               Align(
                 alignment: Alignment.center,
-                child: Image.asset("assets/images/animal.png"),
+                child: Image.asset("assets/images/animal_small.png",
+                    height: MediaQuery.of(context).size.width * 0.5),
               ),
               Expanded(
                 child: curvedContainer,
