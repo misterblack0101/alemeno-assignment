@@ -46,6 +46,7 @@ class _ClickPictureScreenState extends State<ClickPictureScreen> {
     // 6
     try {
       await _cameraController?.initialize();
+      _cameraController!.setFlashMode(FlashMode.off);
     } on CameraException catch (e) {
       log(e.toString());
     }
@@ -104,22 +105,21 @@ class _ClickPictureScreenState extends State<ClickPictureScreen> {
                   width: 2,
                 ),
               ),
-              child: CircleAvatar(
-                radius: size.width * 0.2,
-                // backgroundColor: Colors,
-                // If the camera is yet to load, show text.
-                child: (_cameraController == null ||
-                        !_cameraController!.value.isInitialized)
-                    ? const Text(
+              child: (_cameraController == null ||
+                      !_cameraController!.value.isInitialized)
+                  ? const Center(
+                      child: Text(
                         'Loading',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.grey,
                           fontSize: 20.0,
                           fontWeight: FontWeight.w900,
                         ),
-                      )
-                    : CameraPreview(_cameraController!),
-              ),
+                      ),
+                    )
+                  : ClipOval(
+                      child: CameraPreview(_cameraController!),
+                    ),
             ),
             Image.asset("assets/images/spoon.png"),
           ],

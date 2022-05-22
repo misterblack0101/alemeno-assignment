@@ -15,7 +15,7 @@ class BaseLayout extends StatelessWidget {
       child: Material(
         color: CustomColors.backgroundColor,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 5),
+          padding: const EdgeInsets.fromLTRB(5, 20, 5, 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,

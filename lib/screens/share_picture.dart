@@ -34,8 +34,8 @@ class SharePictureScreen extends StatelessWidget {
           },
         ),
         mainWidget: CircleAvatar(
-          radius: size.width * 0.2,
-          child: Image.file(
+          radius: size.width * 0.25,
+          backgroundImage: FileImage(
             File(imagePath),
           ),
         ),
